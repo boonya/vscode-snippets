@@ -1,0 +1,73 @@
+{
+  "Component": {
+    "scope": "javascript,javascriptreact",
+    "prefix": ["rfce", "Component"],
+    "description": "Create a React Functional Component",
+    "body": [
+      "import PropTypes from 'prop-types';",
+      "import React from 'react'",
+      "",
+      "export default function $TM_FILENAME_BASE({",
+      "    component: C,",
+      "    children,",
+      "    ...props",
+      "}) {",
+      "    return <C $3{...props}>{children}</C>;",
+      "}",
+      "",
+      "$TM_FILENAME_BASE.propTypes = {",
+      "    children: PropTypes.node.isRequired,",
+      "    component: PropTypes.elementType,",
+      "};",
+      "",
+      "$TM_FILENAME_BASE.defaultProps = {",
+      "    component: 'div',",
+      "};",
+      ""
+    ]
+  },
+  "RefComponent": {
+    "scope": "javascript,javascriptreact",
+    "prefix": ["rfcr", "RefComponent"],
+    "description": "Create a React functional component that forwards a reference.",
+    "body": [
+      "import PropTypes from 'prop-types';",
+      "import React, {forwardRef} from 'react';",
+      "",
+      "const $TM_FILENAME_BASE = forwardRef(({",
+      "    component: C,",
+      "    children,",
+      "    ...props",
+      "}, ref) => {",
+      "    return <C ref={ref} $3{...props}>{children}</C>;",
+      "});",
+      "",
+      "$TM_FILENAME_BASE.displayName = '$TM_FILENAME_BASE';",
+      "",
+      "export default $TM_FILENAME_BASE;",
+      "",
+      "$TM_FILENAME_BASE.propTypes = {",
+      "    children: PropTypes.node.isRequired,",
+      "    component: PropTypes.elementType,",
+      "};",
+      "",
+      "$TM_FILENAME_BASE.defaultProps = {",
+      "    component: 'div',",
+      "};",
+      ""
+    ]
+  },
+  "useReactHook": {
+    "scope": "javascript,javascriptreact",
+    "prefix": ["rh", "ReactHook", "Hook"],
+    "description": "Create custom React Hook",
+    "body": [
+      "import React, {useCallback} from 'react';",
+      "",
+      "export default function $TM_FILENAME_BASE() {",
+      "    return useCallback(() => {$1}, []);",
+      "}",
+      ""
+    ]
+  }
+}

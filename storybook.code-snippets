@@ -1,0 +1,17 @@
+{
+  "stories": {
+    "scope": "javascript,javascriptreact",
+    "prefix": ["stories", "Story"],
+    "description": "Create a Storybook file",
+    "body": [
+      "import Component from '${1:.}';",
+      "",
+      "export default {$3};",
+      "",
+      "export function ${2:${TM_FILENAME_BASE/\\.stories$//gi}}(args) {",
+      "    return <Component {...args} />;",
+      "}",
+      ""
+    ]
+  }
+}
