@@ -1,0 +1,19 @@
+{
+  "SimpleTestSuite": {
+    "scope": "javascript,javascriptreact",
+    "prefix": ["ts", "SimpleTestSuite"],
+    "description": "Create a simple Jest Test Suite file.",
+    "body": [
+      "import $1 from '.';",
+      "import {screen} from '@testing-library/react';",
+      "import {renderComponent} from '@test/render';",
+      "",
+      "it('should render component.', () => {",
+      "    renderComponent(<$1 />);",
+      "",
+      "    screen.getByRole('$2'$3);",
+      "});",
+      ""
+    ]
+  }
+}
