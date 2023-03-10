@@ -1,4 +1,4 @@
-# Code snippets for the VSCode editor
+# [Code snippets for the VSCode editor](https://github.com/boonya/vscode-snippets#code-snippets-for-the-vscode-editor)
 
 Copy them into your code snippets directory:
 
