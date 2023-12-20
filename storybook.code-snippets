@@ -1,16 +1,41 @@
 {
-  "stories": {
+  "stories.js": {
     "scope": "javascript,javascriptreact",
     "prefix": ["stories", "Story"],
     "description": "Create a Storybook file",
     "body": [
       "import Component from '${1:.}';",
+      "import React from 'react';",
       "",
-      "export default {$3};",
+      "export default {",
+      "  component: Component,$3",
+      "};",
       "",
       "export function ${2:${TM_FILENAME_BASE/\\.stories$//gi}}(args) {",
-      "    return <Component {...args} />;",
+      "  return <Component {...args} />;",
       "}",
+      ""
+    ]
+  },
+  "stories.ts": {
+    "scope": "typescript,typescriptreact",
+    "prefix": ["stories", "Story"],
+    "description": "Create a Storybook file",
+    "body": [
+      "import Component from '.';",
+      "import type {Meta, StoryObj} from '@storybook/react';",
+      "",
+      "const meta: Meta<typeof Component> = {",
+      "  component: Component,",
+      "  parameters: {},",
+      "  decorators: [],",
+      "};",
+      "",
+      "export default meta;",
+      "",
+      "type Story = StoryObj<typeof meta>;",
+      "",
+      "export const Initial: Story = {};",
       ""
     ]
   }

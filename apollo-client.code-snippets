@@ -1,7 +1,7 @@
 {
   "useFetch": {
     "scope": "javascript,javascriptreact",
-    "prefix": ["FetchHook"],
+    "prefix": ["FetchHook", "useFetch"],
     "description": "Create a useFetch hook based on useQuery from the @apollo/client lib.",
     "body": [
       "import QUERY from './Fetch${1/(.+)$/${1:/capitalize}/}.gql';",
@@ -33,7 +33,7 @@
   },
   "useLazyFetch": {
     "scope": "javascript,javascriptreact",
-    "prefix": ["LazyFetchHook"],
+    "prefix": ["LazyFetchHook", "useLazyFetch"],
     "description": "Create a useLazyFetch hook based on useLazyQuery from the @apollo/client lib.",
     "body": [
       "import QUERY from './Fetch${1/(.+)$/${1:/capitalize}/}.gql';",
@@ -71,7 +71,7 @@
   },
   "useMutation": {
     "scope": "javascript,javascriptreact",
-    "prefix": ["MutationHook"],
+    "prefix": ["MutationHook", "useMutation"],
     "description": "Create a useMutation hook based on useMutation from the @apollo/client lib.",
     "body": [
       "import MUTATION from './${1/(.+)$/${1:/capitalize}/}${2/(.+)$/${1:/capitalize}/}.gql';",

@@ -1,17 +1,41 @@
 {
-  "SimpleTestSuite": {
+  "TestComponent.js": {
     "scope": "javascript,javascriptreact",
-    "prefix": ["ts", "SimpleTestSuite"],
-    "description": "Create a simple Jest Test Suite file.",
+    "prefix": ["tc", "TestComponent"],
+    "description": "Create a simple Jest Test Suite for component testing.",
     "body": [
       "import $1 from '.';",
       "import {screen} from '@testing-library/react';",
       "import {renderComponent} from '@test/render';",
       "",
+      "function Component(props) {",
+      "    return <$1 {...props} />;",
+      "}",
+      "",
       "it('should render component.', () => {",
-      "    renderComponent(<$1 />);",
+      "    renderComponent(<Component />);",
       "",
       "    screen.getByRole('$2'$3);",
+      "});",
+      ""
+    ]
+  },
+  "TestHook.js": {
+    "scope": "javascript,javascriptreact",
+    "prefix": ["th", "TestHook"],
+    "description": "Create a simple Jest Test Suite for hook testing.",
+    "body": [
+      "import use${1:Hook} from './use${1:Hook}';",
+      "import {renderHook} from '@test/render';",
+      "",
+      "function render(...args) {",
+      "    return renderHook(() => ${1:Hook}(...args);",
+      "}",
+      "",
+      "it('should render hook.', () => {",
+      "    const {result} = render($2);",
+      "",
+      "    expect(result.current).toEqual($3);",
       "});",
       ""
     ]

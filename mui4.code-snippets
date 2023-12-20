@@ -1,0 +1,20 @@
+{
+	"useStyles": {
+		"scope": "javascript,javascriptreact",
+		"prefix": "useStyles",
+		"body": [
+      "const useStyles = makeStyles(($2) => ({",
+      "    ${1:root}: {$3},",
+      "}));",
+		],
+		"description": "Define useStyles hook"
+	},
+	"classes": {
+		"scope": "javascript,javascriptreact",
+		"prefix": "classes",
+		"body": [
+      "const classes = useStyles($1);",
+		],
+		"description": "Define classes object"
+	}
+}
